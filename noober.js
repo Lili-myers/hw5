@@ -69,6 +69,12 @@ function renderRides(ridesArray) {
 
 window.addEventListener('DOMContentLoaded', function() {
   // YOUR CODE
+  // hierarchy --> add event listener for 'all rides'; then Noober Purple, then others (XL, X, Pool)
+  // when event occurs  -> 
+      //1) request ride data from API 
+      //2) create new empty array 
+      //3) loop through rides using levelOfService() function to determine the service level, and use newArray.push(ride) to add "Noober Purple" rides into the new array
+      //4)lastly, pass the new array of filtered rides to the renderRides() function & repeat
 let allRides = document.querySelector('#all-filter')
   allRides.addEventListener('click', async function(event) {
     event.preventDefault()
