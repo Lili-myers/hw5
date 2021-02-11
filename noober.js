@@ -99,8 +99,8 @@ let NooberPurple = document.querySelector('#noober-purple-filter')
       newArray.push(json[i])
   }
 }
-renderRides(newArray)
-  })
+  renderRides(newArray)
+})
 
 let NooberXL = document.querySelector('#noober-xl-filter')
   NooberXL.addEventListener('click', async function(event) {
@@ -133,6 +133,7 @@ let NooberXL = document.querySelector('#noober-xl-filter')
     }
     renderRides(newArray)
   })
+  
     let NooberPool = document.querySelector('#noober-pool-filter')
     NooberPool.addEventListener('click', async function(event) {
       event.preventDefault()
@@ -149,4 +150,3 @@ let NooberXL = document.querySelector('#noober-xl-filter')
     renderRides(newArray)
   })
 })
-
