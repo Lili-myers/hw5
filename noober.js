@@ -128,7 +128,7 @@ let NooberXL = document.querySelector('#noober-xl-filter')
     renderRides(newArray)
   })
     let NooberPool = document.querySelector('#noober-pool-filter')
-    NooberP.addEventListener('click', async function(event) {
+    NooberPool.addEventListener('click', async function(event) {
       event.preventDefault()
       document.querySelector(`.rides`).innerHTML = ''
       let response = await fetch(`https://kiei451.com/api/rides.json`)
@@ -137,7 +137,7 @@ let NooberXL = document.querySelector('#noober-xl-filter')
       for (let i=0; i<json.length; i++) {
         let p = levelOfService(json[i])
         if(p == 'Noober Pool') {
-          newArray.push(json[i]
+          newArray.push(json[i])
       }
     }
     renderRides(newArray)
