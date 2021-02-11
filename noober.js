@@ -105,7 +105,7 @@ let NooberXL = document.querySelector('#noober-xl-filter')
   let newArray = []
   for (let i=0; i<json.length; i++) {
     let p = levelOfService(json[i])
-    if(p == 'Noober Purple') {
+    if(p == 'Noober XL') {
       newArray.push(json[i])
     }
   }
@@ -114,7 +114,7 @@ let NooberXL = document.querySelector('#noober-xl-filter')
 
   let NooberX = document.querySelector('#noober-x-filter')
     NooberX.addEventListener('click', async function(event) {
-    event.preentDefault()
+    event.preventDefault()
     document.querySelector(`.rides`).innerHTML = ''
     let response = await fetch(`https://kiei451.com/api/rides.json`)
     let json = await response.json()
@@ -129,11 +129,15 @@ let NooberXL = document.querySelector('#noober-xl-filter')
   })
     let NooberPool = document.querySelector('#noober-pool-filter')
     NooberP.addEventListener('click', async function(event) {
-      event.preentDefault()
+      event.preventDefault()
       document.querySelector(`.rides`).innerHTML = ''
       let response = await fetch(`https://kiei451.com/api/rides.json`)
       let json = await response.json()
       let newArray = []
+      for (let i=0; i<json.length; i++) {
+        let p = levelOfService(json[i])
+        if(p == 'Noober Pool') {
+          newArray.push(json[i]
       }
     }
     renderRides(newArray)
